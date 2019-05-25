@@ -1,0 +1,505 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="css/bootstrap-horizon.css">
+    <link rel="stylesheet" href="lib/fontawesome-free-5.1.0-web/css/all.css">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+
+</head>
+<body >
+<div class="home-top-background">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 offset-md-6 home-top-text-wrapper ">
+                <p>MARVY</p>
+                <p>AR STUDIO</p>
+                <hr class="hr-custom">
+                <span>Best AR solution for your startup business</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 home-top-menu-wrapper">
+                <ul class="list-unstyled home-menu-wrapper" id="fixed-top">
+                    <p id="hidden-logo">
+                        MARVY
+                    </p>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row" align="right">
+            <div class="col-md-6 home-quote-wrapper text-right">
+                <p>
+                    Make your dreams<br>
+                    become reality
+                </p>
+                <span>
+                    We create high quality AR app  to support<br>
+                    your vision and empower your startup company
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="home-service-wrapper">
+    <div class="container">
+
+        <div class="home-service-title">Our Services</div>
+        <div class="row justify-content-center">
+            <div class="card-deck">
+                <div class="home-service-content card  text-center" >
+                    <div class="card-3d">
+                        <div class="card-3d-img-wrapper">
+                            <img class="card-3d-img home-service-content-icon" width="150px" height="150px" src="images/icons/4593143-256.png">
+                        </div>
+                    </div>
+                    <div>VR</div>
+                    <button class="btn home-service-btn ">Detail</button>
+                </div>
+                <div class="home-service-content card  text-center" >
+                    <div class="card-3d">
+                        <div class="card-3d-img-wrapper">
+                            <img class="card-3d-img home-service-content-icon" width="150px" height="150px" src="images/icons/iconfinder_device-iPhone-smartphone-horizontal-glyph_763205.png">
+                        </div>
+                    </div>
+                    <div>AR</div>
+                    <button class="btn home-service-btn ">Detail</button>
+                </div>
+                <div class="home-service-content card  text-center" >
+                    <div class="card-3d">
+                        <div class="card-3d-img-wrapper">
+                            <img class="card-3d-img home-service-content-icon" width="150px" height="150px" src="images/icons/463002-512.png">
+                        </div>
+                    </div>
+                    <div style="font-size: 30px">Interactive <br> Web & App</div>
+                    <button class="btn home-service-btn ">Detail</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div id="demo" ng-controller="slideCtrl" class="{{takewidth>768 ? 'carousel slide' : ''}}" data-ride="carousel" data-interval="false">
+    <!-- The slideshow -->
+    <div class="{{takewidth>768 ? 'carousel-inner' : ''}}" style="position: relative" > <!--carousel-inner-->
+        <div class="{{takewidth>768 ? 'carousel-item active' : ''}} "> <!--carousel-item-->
+            <div class="home-slide-description"> <!--home-slide-description-->
+                <div class="container" > <!--container-->
+                    <div class="row"> <!--row-->
+                        <div class="col-12 text-center">
+                            <div class="home-slide-description-title-wrapper"> <!--home-slide-description-title-wrapper-->
+                                <div class="home-slide-description-sub">
+                                    our product
+                                </div>
+                                <hr class="hr-custom">
+                                <div class="home-slide-description-title">
+                                    milkteaWIKI
+                                </div>
+                                <div class="home-slide-feature-description text-center">
+                                    Product’s description goes here. Lorem ipsum dolor sit amet, consectetur adipisicing
+                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </div>
+                            </div> <!--/home-slide-description-title-wrapper-->
+                        </div>
+                    </div> <!--/row-->
+                    <div class="row home-slide-feature-wrapper "  > <!--row-->
+                            <div class="col-md-6"> <!--col-6-->
+                                <div class="row"> <!--row-->
+                                    <div class="col-2">
+                                        <img src="images/icons/4593108-64%20(1).png" class="img-fluid">
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="home-slide-feature-title">Feature 1</div>
+                                        <div class="home-slide-feature-description"><!--home-slide-feature-description-->
+                                            Description goes here.
+                                            Lorem ipsum dolor sit amet,
+                                            labore et dolore magna aliqua.
+                                        </div> <!--/home-slide-feature-description-->
+                                    </div>
+                                </div> <!--/row-->
+                            </div> <!--/col-6-->
+                            <div class="col-md-6"> <!--col-6-->
+                                <div class="row"> <!--row-->
+                                    <div class="col-2">
+                                        <img src="images/icons/4229873-128.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="home-slide-feature-title">Feature 2</div>
+                                        <div class="home-slide-feature-description"><!--home-slide-feature-description-->
+                                            Description goes here.
+                                            Lorem ipsum dolor sit amet,
+                                            labore et dolore magna aliqua.
+                                        </div> <!--/home-slide-feature-description-->
+                                    </div>
+                                </div> <!--/row-->
+                            </div> <!--/col-6-->
+                            <div class="col-md-6"> <!--col-6-->
+                                <div class="row"> <!--row-->
+                                    <div class="col-2">
+                                        <img src="images/icons/4308087-128.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="home-slide-feature-title">Feature 3</div>
+                                        <div class="home-slide-feature-description"><!--home-slide-feature-description-->
+                                            Description goes here.
+                                            Lorem ipsum dolor sit amet,
+                                            labore et dolore magna aliqua.
+                                        </div> <!--/home-slide-feature-description-->
+                                    </div>
+                                </div> <!--/row-->
+                            </div> <!--/col-6-->
+                            <div class="col-md-6"> <!--col-6-->
+                                <div class="row"> <!--row-->
+                                    <div class="col-2">
+                                        <img src="images/icons/4308100-128.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="home-slide-feature-title">Feature 4</div>
+                                        <div class="home-slide-feature-description"><!--home-slide-feature-description-->
+                                            Description goes here.
+                                            Lorem ipsum dolor sit amet,
+                                            labore et dolore magna aliqua.
+                                        </div> <!--/home-slide-feature-description-->
+                                    </div>
+                                </div> <!--/row-->
+                            </div> <!--/col-6-->
+                        </div> <!--/row-->
+                        <div class="row  mt-md-5">
+                            <div class="col-md-12 col-lg-12" style="position: relative;">
+                                <div class="home-slide-video-title pt-sm-0 pt-md-3">
+                                    A SLIDER / CAROUSEL TO SHOW
+                                    PRODUCT’S IMAGES, AND THIS IS IT’S
+                                    TITLE
+                                </div>
+                                <div class="home-slide-video-sub">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                </div>
+                                <div class="mt-5 mb-3">
+                                    <button class="btn home-slide-video-btn">Show Case</button>
+                                </div>
+                            </div>
+                        </div>
+                </div> <!--/container-->
+            </div> <!--/home-slide-description-->
+            
+            <div class="home-slide-video-wrapper" style="z-index: -1" > <!--home-slide-video-wrapper-->
+                <div class="overlay"> </div>
+
+                <video class="home-slide-video"  autoplay muted loop>
+                    <source src="images/Aspect%20Ratio%20-%20169%20Video%20Demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div> <!--/home-slide-video-wrapper-->
+        </div> <!--/carousel-item-->
+        <div class="{{takewidth>768 ? 'carousel-item' : ''}} "> <!--carousel-item-->
+            <div class="home-slide-description"> <!--home-slide-description-->
+                <div class="container" > <!--container-->
+                    <div class="row"> <!--row-->
+                        <div class="col-12 text-center">
+                            <div class="home-slide-description-title-wrapper"> <!--home-slide-description-title-wrapper-->
+                                <div class="home-slide-description-sub">
+                                    our product
+                                </div>
+                                <hr class="hr-custom">
+                                <div class="home-slide-description-title">
+                                    milkteaWIKI
+                                </div>
+                                <div class="home-slide-feature-description text-center">
+                                    Product’s description goes here. Lorem ipsum dolor sit amet, consectetur adipisicing
+                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </div>
+                            </div> <!--/home-slide-description-title-wrapper-->
+                        </div>
+                    </div> <!--/row-->
+                    <div class="row home-slide-feature-wrapper "  > <!--row-->
+                        <div class="col-md-6"> <!--col-6-->
+                            <div class="row"> <!--row-->
+                                <div class="col-2">
+                                    <img src="images/icons/4593108-64%20(1).png" class="img-fluid">
+                                </div>
+                                <div class="col-10">
+                                    <div class="home-slide-feature-title">Feature 1</div>
+                                    <div class="home-slide-feature-description"><!--home-slide-feature-description-->
+                                        Description goes here.
+                                        Lorem ipsum dolor sit amet,
+                                        labore et dolore magna aliqua.
+                                    </div> <!--/home-slide-feature-description-->
+                                </div>
+                            </div> <!--/row-->
+                        </div> <!--/col-6-->
+                        <div class="col-md-6"> <!--col-6-->
+                            <div class="row"> <!--row-->
+                                <div class="col-2">
+                                    <img src="images/icons/4229873-128.png" class="img-fluid">
+                                </div>
+                                <div class="col-10">
+                                    <div class="home-slide-feature-title">Feature 2</div>
+                                    <div class="home-slide-feature-description"><!--home-slide-feature-description-->
+                                        Description goes here.
+                                        Lorem ipsum dolor sit amet,
+                                        labore et dolore magna aliqua.
+                                    </div> <!--/home-slide-feature-description-->
+                                </div>
+                            </div> <!--/row-->
+                        </div> <!--/col-6-->
+                        <div class="col-md-6"> <!--col-6-->
+                            <div class="row"> <!--row-->
+                                <div class="col-2">
+                                    <img src="images/icons/4308087-128.png" class="img-fluid">
+                                </div>
+                                <div class="col-10">
+                                    <div class="home-slide-feature-title">Feature 3</div>
+                                    <div class="home-slide-feature-description"><!--home-slide-feature-description-->
+                                        Description goes here.
+                                        Lorem ipsum dolor sit amet,
+                                        labore et dolore magna aliqua.
+                                    </div> <!--/home-slide-feature-description-->
+                                </div>
+                            </div> <!--/row-->
+                        </div> <!--/col-6-->
+                        <div class="col-md-6"> <!--col-6-->
+                            <div class="row"> <!--row-->
+                                <div class="col-2">
+                                    <img src="images/icons/4308100-128.png" class="img-fluid">
+                                </div>
+                                <div class="col-10">
+                                    <div class="home-slide-feature-title">Feature 4</div>
+                                    <div class="home-slide-feature-description"><!--home-slide-feature-description-->
+                                        Description goes here.
+                                        Lorem ipsum dolor sit amet,
+                                        labore et dolore magna aliqua.
+                                    </div> <!--/home-slide-feature-description-->
+                                </div>
+                            </div> <!--/row-->
+                        </div> <!--/col-6-->
+                    </div> <!--/row-->
+                    <div class="row  mt-md-5">
+                        <div class="col-md-12 col-lg-12" style="position: relative;">
+                            <div class="home-slide-video-title pt-sm-0 pt-md-3">
+                                A SLIDER / CAROUSEL TO SHOW
+                                PRODUCT’S IMAGES, AND THIS IS IT’S
+                                TITLE
+                            </div>
+                            <div class="home-slide-video-sub">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            </div>
+                            <div class="mt-5 mb-3">
+                                <button class="btn home-slide-video-btn">Show Case</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--/container-->
+            </div> <!--/home-slide-description-->
+
+            <div class="home-slide-video-wrapper" style="z-index: -1" > <!--home-slide-video-wrapper-->
+                <div class="overlay"> </div>
+
+                <video class="home-slide-video"  autoplay muted loop>
+                    <source src="images/Aspect%20Ratio%20-%20169%20Video%20Demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div> <!--/home-slide-video-wrapper-->
+        </div> <!--/carousel-item-->
+    </div> <!--/carousel-inner-->
+    <div ng-if="takewidth>768" style="position: absolute; bottom: 0; left: 45%" >
+        <a class="carousel-control-custom btn" href="#demo" data-slide="prev" >
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-custom btn" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+    <!-- Left and right controls -->
+</div> <!-- /The slideshow -->
+
+<div class="home-mansory-new"> <!-- Start home-mansory-new -->
+    <div class="container"> <!-- Start container-->
+
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h5>LATEST BLOG</h5>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card-columns pb-3">
+                <div class="card home-news-card-wrapper">
+                    <img src="images/5c8b768f81c28.jpg" alt="" class="img-fluid">
+                    <div class="card-body">
+                        <h4 class="card-title">Blog's title, sorem is idea developer</h4>
+                        <span>21/06/2019</span>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+                <div class="card home-news-card-wrapper">
+                    <img src="images/cellphone-device-electronics-699122.jpg" alt="" class="img-fluid">
+                    <div class="card-body">
+                        <h4 class="card-title">Blog's title, sorem is idea developer</h4>
+                        <span>21/06/2019</span>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+
+                <div class="card home-news-card-wrapper">
+                    <img src="images/f2.jpg" alt="" class="img-fluid">
+                    <div class="card-body">
+                        <h4 class="card-title">Blog's title, sorem is idea developer</h4>
+                        <span>21/06/2019</span>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+                <div class="card home-news-card-wrapper">
+                    <img src="images/background-black-colors-952670.jpg" alt="" class="img-fluid">
+                    <div class="card-body">
+                        <h4 class="card-title">Blog's title, sorem is idea developer</h4>
+                        <span>21/06/2019</span>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+                <div class="card home-news-card-wrapper">
+                    <img src="images/5c8b768f81c28.jpg" alt="" class="img-fluid">
+                    <div class="card-body">
+                        <h4 class="card-title">Blog's title, sorem is idea developer</h4>
+                        <span>21/06/2019</span>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+                <div class="card home-news-card-wrapper">
+                    <img src="images/contemporary-dark-data-669996.jpg" alt="" class="img-fluid">
+                    <div class="card-body">
+                        <h4 class="card-title">Blog's title, sorem is idea developer</h4>
+                        <span>21/06/2019</span>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- End container -->
+</div> <!-- End home-mansory-new -->
+
+<div class="home-part-second"> <!-- Start home-part-second -->
+    <div class="container"> <!-- Start container -->
+        <div class="row">
+            <div class="col-sm-4 offset-sm-4">
+                <h4>DROP US A LINE ASK US ANYTHING</h4>
+                <div class="form-group">
+                    <input type="text" class="form-control repair" placeholder="Your name*">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control repair" placeholder="Your email address*" style="border-bottom: none;">
+                </div>
+                <div class="content">
+                    <p>I'm interested in</p>
+                    <label class="check">Big-screen AR
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="check">Kloack-based AR
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="check">Phone AR
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="check">Wearables
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your message" class="form-control repair" cols="30" rows="10" style="border-top: none"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="form-control button" value="SEND MESSAGE">
+                </div>
+            </div>
+        </div>
+    </div> <!-- End container -->
+</div> <!-- End home-part-second -->
+
+<div class="home-part-final"> <!-- Start home-part-final -->
+    <div class="container"> <!-- Start container -->
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h2>marvy</h2>
+                <span>ar studio</span>
+                <p>© MARVY 2019 - All rights reserved</p>
+            </div>
+        </div>
+    </div> <!-- End container -->
+</div> <!-- End home-part-final -->
+
+<div class="home-footer"> <!-- Start home-footer -->
+    <div class="container-fluid"> <!-- Start ccontainer -->
+        <div class="row">
+            <div class="col-sm-12 p-0">
+                <a href=""><i class="fab fa-facebook-f"></i></i></a>
+            </div>
+        </div>
+    </div> <!-- End ccontainer -->
+</div> <!-- End home-footer -->
+
+</body>
+</html>
+<script>
+    $('#avoid').click(function (e) {
+        e.stopPropagation();
+    });
+    $('.card-3d').mousemove(function(ev){
+        let parentWidth = $(this).width();  // Chiều rộng div cha
+        let parentHeight = $(this).height();  // Chiều dài div cha
+        let mouseX = ev.pageX - $(this).offset().left;  // Vị trí x chuột trong div cha
+        let mouseY = ev.pageY - $(this).offset().top;  // Vị trí y chuột trong div cha
+        let x = (parentWidth/2 - mouseX)/15;
+        let y = -(parentHeight/2 - mouseY)/15;
+
+        $(this).css({
+            'transform': 'rotateX('+ y +'deg) rotateY('+ 2*x +'deg) translateZ(50px)',
+            'transition': 'all .15s ease'
+        });
+        $(this).find('.card-3d-img').css({
+            'transform': 'scale(1.05) translateX('+ -5*x +'px) translateY('+ -5*y +'px)',
+            'transition': 'all .15s ease'
+        });
+    });
+
+    $('.card-3d').mouseleave(function(ev) {
+        $(this).css({
+            'transform': 'rotateX(0) rotateY(0)',
+            'transition': 'all .6s ease'
+        });
+
+        $(this).find('.card-3d-img').css({
+            'transform': 'scale(1) translateX(0px) translateY(0px) translateZ(0)',
+            'transition': 'all .6s ease'
+        });
+    });
+    var app = angular.module('myApp', []);
+    app.controller('slideCtrl', function($scope) {
+        var width=$( window ).width();
+        $scope.takewidth = width;
+    });
+</script>
+
