@@ -16,30 +16,56 @@
 </head>
 <body >
 <div class="home-top-background">
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+        <a><img src="images/logomarvy_onblack.png" width="100px"></a>
+        <a href="#">Home</a>
+        <a href="#">About us</a>
+        <div style="background-color:#5028ff; ">
+            <a href="#" style="color: white!important; ">VR</a>
+            <a href="#" style="color: white!important; ">AR</a>
+            <a href="#" style="color: white!important; ">WEB</a>
+        </div>
+        <a href="#">Contact us</a>
+        <a href="#">Blog</a>
+        <div style="color: white; margin-top: 50px">
+            <i class="fab fa-facebook-f fa-2x fa-fw d-inline-block"></i>
+            <i class="fab fa-twitter fa-2x fa-fw d-inline-block"></i>
+            <i class="fab fa-pinterest-p fa-2x fa-fw d-inline-block"></i>
+        </div>
+    </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6 offset-md-6 home-top-text-wrapper ">
-                <p>MARVY</p>
-                <p>AR STUDIO</p>
-                <hr class="hr-custom">
-                <span>Best AR solution for your startup business</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 home-top-menu-wrapper">
-                <ul class="list-unstyled home-menu-wrapper" id="fixed-top">
+            <div class="col-4 home-top-menu-wrapper  ">
+                <span class="d-block d-sm-none" style="font-size:30px; color: white" onclick="openNav()"><i class="fas fa-bars"></i></span>
+
+                <ul class="list-unstyled home-menu-wrapper d-none d-sm-block d-md-block" id="fixed-top">
                     <p id="hidden-logo">
-                        MARVY
+                        <img src="images/logoM_onblack.png" width="50px">
                     </p>
-                    <li><a href="#">Home</a></li>
+                    <li ><a href="#" style="font-family: utmneu;">Home</a></li>
                     <li><a href="#">About us</a></li>
+                    <li><a href="#" style="color: #5028ff">VR</a></li>
+                    <li><a href="#" style="color: #5028ff">AR</a></li>
+                    <li><a href="#" style="color: #5028ff">WEB</a></li>
                     <li><a href="#">Contact us</a></li>
                     <li><a href="#">Blog</a></li>
                 </ul>
             </div>
+            <div class="col-4 home-top-text-wrapper" align="center" >
+                <img src="images/logomarvy_onblack.png" width="100px">
+            </div>
+            <div class="col-4  d-none d-sm-block d-md-block" align="right" style="color: white" >
+                <i class="fab fa-facebook-f fa-2x fa-fw d-inline-block"></i>
+                <i class="fab fa-twitter fa-2x fa-fw d-inline-block"></i>
+                <i class="fab fa-pinterest-p fa-2x fa-fw d-inline-block"></i>
+            </div>
         </div>
-        <div class="row" align="right">
-            <div class="col-md-6 home-quote-wrapper text-right">
+        <div class="row">
+
+        </div>
+        <div class="row">
+            <div class="col-md-12 home-quote-wrapper text-center">
                 <p>
                     Make your dreams<br>
                     become reality
@@ -58,24 +84,31 @@
 
         <div class="home-service-title">Our Services</div>
         <div class="row justify-content-center">
-            <div class="card-deck">
-                <div class="home-service-content card  text-center" >
+            <div class="card-columns">
+                <div class="home-service-content card  text-center" onclick="javascript:window.location.href='https://cutocubu.github.io/testAR/VR.html'">
                     <div class="card-3d">
                         <div class="card-3d-img-wrapper">
                             <img class="card-3d-img home-service-content-icon" width="150px" height="150px" src="images/icons/4593143-256.png">
                         </div>
                     </div>
                     <div>VR</div>
-                    <button class="btn home-service-btn " onclick="javascript:window.location.href='https://cutocubu.github.io/testAR/VR.html'">Detail</button>
+                    <span class="home-service-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </span><br>
+                    <button class="btn home-service-btn " >Detail</button>
                 </div>
-                <div class="home-service-content card  text-center" >
+                <div class="home-service-content card  text-center" onclick="javascript:window.location.href='https://cutocubu.github.io/testAR/AR.html'">
                     <div class="card-3d">
                         <div class="card-3d-img-wrapper">
                             <img class="card-3d-img home-service-content-icon" width="150px" height="150px" src="images/icons/iconfinder_device-iPhone-smartphone-horizontal-glyph_763205.png">
                         </div>
                     </div>
                     <div>AR</div>
-                    <button class="btn home-service-btn " onclick="javascript:window.location.href='https://cutocubu.github.io/testAR/AR.html'">Detail</button>
+                    <span class="home-service-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </span><br>
+                    <button class="btn home-service-btn " >Detail</button>
                 </div>
                 <div class="home-service-content card  text-center" >
                     <div class="card-3d">
@@ -84,6 +117,9 @@
                         </div>
                     </div>
                     <div style="font-size: 30px">Interactive <br> Web & App</div>
+                    <span class="home-service-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </span><br>
                     <button class="btn home-service-btn ">Detail</button>
                 </div>
             </div>
@@ -94,6 +130,12 @@
 
 
 <div id="demo" ng-controller="slideCtrl" class="{{takewidth>768 ? 'carousel slide' : ''}}" data-ride="carousel" data-interval="false">
+    <ul class="carousel-indicators" ng-show="takewidth>768" style="z-index: 9999!important;">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+
     <!-- The slideshow -->
     <div class="{{takewidth>768 ? 'carousel-inner' : ''}}" style="position: relative" > <!--carousel-inner-->
         <div class="{{takewidth>768 ? 'carousel-item active' : ''}} "> <!--carousel-item-->
@@ -117,69 +159,75 @@
                         </div>
                     </div> <!--/row-->
                     <div class="row home-slide-feature-wrapper "  > <!--row-->
-                            <div class="col-md-6"> <!--col-6-->
-                                <div class="row"> <!--row-->
-                                    <div class="col-2">
-                                        <img src="images/icons/4593108-64%20(1).png" class="img-fluid">
-                                    </div>
-                                    <div class="col-10">
-                                        <div class="home-slide-feature-title">Feature 1</div>
-                                        <div class="home-slide-feature-description"><!--home-slide-feature-description-->
-                                            Description goes here.
-                                            Lorem ipsum dolor sit amet,
-                                            labore et dolore magna aliqua.
-                                        </div> <!--/home-slide-feature-description-->
-                                    </div>
-                                </div> <!--/row-->
-                            </div> <!--/col-6-->
-                            <div class="col-md-6"> <!--col-6-->
-                                <div class="row"> <!--row-->
-                                    <div class="col-2">
-                                        <img src="images/icons/4229873-128.png" class="img-fluid">
-                                    </div>
-                                    <div class="col-10">
-                                        <div class="home-slide-feature-title">Feature 2</div>
-                                        <div class="home-slide-feature-description"><!--home-slide-feature-description-->
-                                            Description goes here.
-                                            Lorem ipsum dolor sit amet,
-                                            labore et dolore magna aliqua.
-                                        </div> <!--/home-slide-feature-description-->
-                                    </div>
-                                </div> <!--/row-->
-                            </div> <!--/col-6-->
-                            <div class="col-md-6"> <!--col-6-->
-                                <div class="row"> <!--row-->
-                                    <div class="col-2">
-                                        <img src="images/icons/4308087-128.png" class="img-fluid">
-                                    </div>
-                                    <div class="col-10">
-                                        <div class="home-slide-feature-title">Feature 3</div>
-                                        <div class="home-slide-feature-description"><!--home-slide-feature-description-->
-                                            Description goes here.
-                                            Lorem ipsum dolor sit amet,
-                                            labore et dolore magna aliqua.
-                                        </div> <!--/home-slide-feature-description-->
-                                    </div>
-                                </div> <!--/row-->
-                            </div> <!--/col-6-->
-                            <div class="col-md-6"> <!--col-6-->
-                                <div class="row"> <!--row-->
-                                    <div class="col-2">
-                                        <img src="images/icons/4308100-128.png" class="img-fluid">
-                                    </div>
-                                    <div class="col-10">
-                                        <div class="home-slide-feature-title">Feature 4</div>
-                                        <div class="home-slide-feature-description"><!--home-slide-feature-description-->
-                                            Description goes here.
-                                            Lorem ipsum dolor sit amet,
-                                            labore et dolore magna aliqua.
-                                        </div> <!--/home-slide-feature-description-->
-                                    </div>
-                                </div> <!--/row-->
-                            </div> <!--/col-6-->
-                        </div> <!--/row-->
+                        <div class="col-md-6"> <!--col-6-->
+                            <div class="row"> <!--row-->
+                                <div class="col-2">
+                                    <img src="images/icons/4593108-64%20(1).png" class="img-fluid">
+                                </div>
+                                <div class="col-10">
+                                    <div class="home-slide-feature-title">Feature 1</div>
+                                    <div class="home-slide-feature-description"><!--home-slide-feature-description-->
+                                        Description goes here.
+                                        Lorem ipsum dolor sit amet,
+                                        labore et dolore magna aliqua.
+                                    </div> <!--/home-slide-feature-description-->
+                                </div>
+                            </div> <!--/row-->
+                        </div> <!--/col-6-->
+                        <div class="col-md-6"> <!--col-6-->
+                            <div class="row"> <!--row-->
+                                <div class="col-2">
+                                    <img src="images/icons/4229873-128.png" class="img-fluid">
+                                </div>
+                                <div class="col-10">
+                                    <div class="home-slide-feature-title">Feature 2</div>
+                                    <div class="home-slide-feature-description"><!--home-slide-feature-description-->
+                                        Description goes here.
+                                        Lorem ipsum dolor sit amet,
+                                        labore et dolore magna aliqua.
+                                    </div> <!--/home-slide-feature-description-->
+                                </div>
+                            </div> <!--/row-->
+                        </div> <!--/col-6-->
+                        <div class="col-md-6"> <!--col-6-->
+                            <div class="row"> <!--row-->
+                                <div class="col-2">
+                                    <img src="images/icons/4308087-128.png" class="img-fluid">
+                                </div>
+                                <div class="col-10">
+                                    <div class="home-slide-feature-title">Feature 3</div>
+                                    <div class="home-slide-feature-description"><!--home-slide-feature-description-->
+                                        Description goes here.
+                                        Lorem ipsum dolor sit amet,
+                                        labore et dolore magna aliqua.
+                                    </div> <!--/home-slide-feature-description-->
+                                </div>
+                            </div> <!--/row-->
+                        </div> <!--/col-6-->
+                        <div class="col-md-6"> <!--col-6-->
+                            <div class="row"> <!--row-->
+                                <div class="col-2">
+                                    <img src="images/icons/4308100-128.png" class="img-fluid">
+                                </div>
+                                <div class="col-10">
+                                    <div class="home-slide-feature-title">Feature 4</div>
+                                    <div class="home-slide-feature-description"><!--home-slide-feature-description-->
+                                        Description goes here.
+                                        Lorem ipsum dolor sit amet,
+                                        labore et dolore magna aliqua.
+                                    </div> <!--/home-slide-feature-description-->
+                                </div>
+                            </div> <!--/row-->
+                        </div> <!--/col-6-->
+                    </div> <!--/row-->
+                </div> <!--/container-->
+            </div> <!--/home-slide-description-->
+            
+            <div class="home-slide-video-wrapper"  > <!--home-slide-video-wrapper-->
+                <div class="{{takewidth>768 ? 'overlay' : ''}}  ">
+                    <div class="container">
                         <div class="row  mt-md-5">
-                            <div class="col-md-12 col-lg-12" style="position: relative;">
+                            <div class="col-md-12 col-lg-12">
                                 <div class="home-slide-video-title pt-sm-0 pt-md-3">
                                     A SLIDER / CAROUSEL TO SHOW
                                     PRODUCT’S IMAGES, AND THIS IS IT’S
@@ -196,16 +244,14 @@
                                 </div>
                             </div>
                         </div>
-                </div> <!--/container-->
-            </div> <!--/home-slide-description-->
-            
-            <div class="home-slide-video-wrapper" style="z-index: -1" > <!--home-slide-video-wrapper-->
-                <div class="overlay"> </div>
-
-                <video class="home-slide-video"  autoplay muted loop>
-                    <source src="images/Aspect%20Ratio%20-%20169%20Video%20Demo.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                    </div>
+                </div>
+                <div  ng-if="takewidth>768" style="object-fit: cover; height: 500px; width: 100%">
+                    <video class="home-slide-video"  autoplay muted loop  >
+                        <source src="images/Aspect%20Ratio%20-%20169%20Video%20Demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div> <!--/home-slide-video-wrapper-->
         </div> <!--/carousel-item-->
         <div class="{{takewidth>768 ? 'carousel-item' : ''}} "> <!--carousel-item-->
@@ -290,42 +336,46 @@
                             </div> <!--/row-->
                         </div> <!--/col-6-->
                     </div> <!--/row-->
-                    <div class="row  mt-md-5">
-                        <div class="col-md-12 col-lg-12" style="position: relative;">
-                            <div class="home-slide-video-title pt-sm-0 pt-md-3">
-                                A SLIDER / CAROUSEL TO SHOW
-                                PRODUCT’S IMAGES, AND THIS IS IT’S
-                                TITLE
-                            </div>
-                            <div class="home-slide-video-sub">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                            </div>
-                            <div class="mt-5 mb-3">
-                                <button class="btn home-slide-video-btn">Show Case</button>
-                            </div>
-                        </div>
-                    </div>
                 </div> <!--/container-->
             </div> <!--/home-slide-description-->
 
-            <div class="home-slide-video-wrapper" style="z-index: -1" > <!--home-slide-video-wrapper-->
-                <div class="overlay"> </div>
-
-                <video class="home-slide-video"  autoplay muted loop>
-                    <source src="images/Aspect%20Ratio%20-%20169%20Video%20Demo.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <div class="home-slide-video-wrapper"  > <!--home-slide-video-wrapper-->
+                <div class="{{takewidth>768 ? 'overlay' : ''}}  ">
+                    <div class="container">
+                        <div class="row  mt-md-5">
+                            <div class="col-md-12 col-lg-12">
+                                <div class="home-slide-video-title pt-sm-0 pt-md-3">
+                                    A SLIDER / CAROUSEL TO SHOW
+                                    PRODUCT’S IMAGES, AND THIS IS IT’S
+                                    TITLE
+                                </div>
+                                <div class="home-slide-video-sub">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                </div>
+                                <div class="mt-5 mb-3">
+                                    <button class="btn home-slide-video-btn">Show Case</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div  ng-if="takewidth>768" style="object-fit: cover; height: 500px; width: 100%">
+                    <video class="home-slide-video"  autoplay muted loop  >
+                        <source src="images/Aspect%20Ratio%20-%20169%20Video%20Demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div> <!--/home-slide-video-wrapper-->
         </div> <!--/carousel-item-->
     </div> <!--/carousel-inner-->
-    <div ng-if="takewidth>768" style="position: absolute; bottom: 0; left: 45%" >
-        <a class="carousel-control-custom btn" href="#demo" data-slide="prev" >
+    <div ng-show="takewidth>768" >
+        <a class="carousel-control-prev" href="#demo" style="z-index: 99999!important;" data-slide="prev"  style=" left: 0">
             <span class="carousel-control-prev-icon"></span>
         </a>
-        <a class="carousel-control-custom btn" href="#demo" data-slide="next">
+        <a class="carousel-control-next" href="#demo" style="z-index: 99999!important;" data-slide="next" style="right: 0">
             <span class="carousel-control-next-icon"></span>
         </a>
     </div>
@@ -431,7 +481,7 @@
                 <div class="form-group">
                     <textarea placeholder="Your message" class="form-control repair" cols="30" rows="10" style="border-top: none"></textarea>
                 </div>
-                <div class="form-group">
+                <div class="form-group" align="center">
                     <input type="submit" class="form-control button" value="SEND MESSAGE">
                 </div>
             </div>
@@ -450,17 +500,6 @@
         </div>
     </div> <!-- End container -->
 </div> <!-- End home-part-final -->
-
-<div class="home-footer"> <!-- Start home-footer -->
-    <div class="container-fluid"> <!-- Start ccontainer -->
-        <div class="row">
-            <div class="col-sm-12 p-0">
-                <a href=""><i class="fab fa-facebook-f"></i></i></a>
-            </div>
-        </div>
-    </div> <!-- End ccontainer -->
-</div> <!-- End home-footer -->
-
 </body>
 </html>
 <script>
@@ -501,5 +540,12 @@
         var width=$( window ).width();
         $scope.takewidth = width;
     });
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
 </script>
 

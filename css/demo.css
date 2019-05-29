@@ -16,10 +16,11 @@
 }
 .home-top-background{
     min-height: 700px;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)) ,url(../images/aurasma_augmented_reality-1.png) center;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)) ,url(../images/aurasma_augmented_reality-1.png) center;
     background-size: cover;
     line-height: 20px;
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 .home-top-text-wrapper {
     color: white;
@@ -42,15 +43,17 @@
     margin-bottom: 5px;
 }
 .home-top-menu-wrapper{
-    text-align: right;
+    margin-top: 0px!important;
 
 }
 .home-top-menu-wrapper a {
     color: white;
-    text-transform: uppercase;
-    font-family: utmneu;
+    font-family: ralemed;
     font-size: 22px;
     text-decoration: none;
+}
+.home-menu-wrapper{
+    margin-top: 0px!important;
 }
 .home-menu-wrapper li:not(:last-child) {
     margin-bottom: 10px;
@@ -63,7 +66,8 @@
 .home-menu-wrapper li a:hover{
     background-color: white;
     color: black;
-    padding: 1px 5px 1px 10px;
+    padding: 1px 5px 1px 5px;
+    font-family: utmneu;
 }
 .home-quote-wrapper{
     transition: all 0.3s;
@@ -82,7 +86,7 @@
     font-size: 25px;
 }
 #hidden-logo{
-    visibility: hidden;
+    display: none;
 }
 .scrolled{
     position: fixed!important;
@@ -92,12 +96,12 @@
     background-color: black;
     left: 0px;
     padding: 15px 0 15px 0;
-    z-index: 99!important;
+    z-index: 9999999!important;
     transition: all 0.5s;
     overflow-x: auto;
 }
 .scrolled #hidden-logo {
-    visibility: visible !important;
+    display: block!important;
     color: white;
     font-family: utmneu;
     font-size: 35px;
@@ -136,16 +140,17 @@
 }
 .home-service-content{
      font-family: utmneu;
-     border-top: solid 5px grey;
+     border-top: solid 5px #e5efff;
      transition: 0.3s;
     min-width: 250px;
+    cursor: pointer;
  }
 .home-service-content:hover{
-    border-top: solid 5px black;
+    border-top: solid 5px #5028ff;
     transform: scale(1.05);
 }
 .home-service-content:hover > .home-service-btn {
-    background-color: black;
+    background-color: #5028ff;
     color: white;
 }
 .home-service-content .card{
@@ -154,17 +159,27 @@
 
 .home-service-content div{
     font-size: 50px;
- }
 
+ }
 .home-service-content-icon{
     margin-left: auto;
     margin-right: auto;
 }
+.home-service-description{
+    font-family: ralemed;
+    margin-bottom: 20px;
+}
 .home-service-btn{
-    border-bottom: solid black thin;
-    background-color: grey;
+    border-bottom: solid #e5efff thin;
+    background-color: #e5efff;
     color: white;
+    border-radius: 20px;
     transition: 0.3s;
+    width: 60%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .card-3d {
     margin: auto;
@@ -193,9 +208,9 @@
 }
 
 .home-slide-description{
-    background-color:#2f2e2e ;
-    height: 270px;
+    background-color:#5028ff ;
     color: white;
+    padding: 10px 0px 10px;
 }
 .home-slide-video{
     width: 100%;
@@ -262,9 +277,9 @@
     transition: 0.3s;
 }
 .home-slide-video-btn:hover{
-    border: solid thin black;
+    border: solid thin #5028ff;
     color: white;
-    background-color: black;
+    background-color: #5028ff;
 }
 .carousel-control-custom{
     border:white solid thin;
@@ -301,7 +316,7 @@
 }
 /* End home-mansory-new */
 .home-part-second {
-    background-color: #2F2D2E;
+    background-color: #5028ff;
     color: white;
     font-family: sans-serif;
     font-weight: bold;
@@ -455,10 +470,54 @@
     color: black;
     background-color: white;
 }
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+}
 
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-family: utmneu;
+
+}
+
+.sidenav a:hover{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
 @media only screen and (max-width: 768px) {
     .home-slide-description{
         height: auto;
+    }
+    .home-slide-video-btn{
+        border: solid thin black;
+        color: black;
+    }
+    .home-slide-video-btn:hover{
+        border: solid thin #5028ff;
+        color: white;
+        background-color: #5028ff;
     }
 
 }
@@ -467,6 +526,8 @@
         transform: translateY(0px);
 
     }
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
     .home-menu-wrapper .scrolled  li a{
         font-size: 10px!important;
     }
