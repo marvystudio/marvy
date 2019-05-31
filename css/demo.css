@@ -542,6 +542,11 @@
         color: white;
         background-color: #5028ff;
     }
+    .card-columns {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
 
 }
 @media only screen and (max-width: 576px) {
