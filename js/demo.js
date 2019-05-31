@@ -1,7 +1,17 @@
-
+var lastScrollTop = 0;
 $(function () {
-    $(document).scroll(function () {
+    $(window).scroll(function () {
+        var st = $(this).scrollTop();
         var $nav = $("#fixed-top");
-        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        if (st > lastScrollTop){
+            $nav.removeClass('scrolled');
+        } else {
+
+            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        }
+        lastScrollTop = st;
+
     });
+
 });
+

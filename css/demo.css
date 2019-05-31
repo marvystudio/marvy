@@ -14,9 +14,17 @@
     font-family: "utmneu";
     src: url(../fonts/UTMNeutra.ttf);
 }
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    z-index: -1;
+    min-height: 100%;
+}
 .home-top-background{
     min-height: 700px;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)) ,url(../images/aurasma_augmented_reality-1.png) center;
+
     background-size: cover;
     line-height: 20px;
     padding-top: 20px;
@@ -25,7 +33,6 @@
 .home-top-text-wrapper {
     color: white;
     font-family: utmneu;
-    font-size: 35px;
     text-transform: uppercase;
 }
 .home-top-text-wrapper span{
@@ -34,6 +41,23 @@
     font-size: 25px;
     text-transform: none!important;
 
+}
+.home-top-icons-wrapper i:not(:last-child){
+    margin-bottom: 10px;
+}
+.typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation:
+            typing 3.5s steps(40, end);
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
 }
 .hr-custom{
     background-color: white;
@@ -80,7 +104,7 @@
     line-height: 60px;
     margin-top: 50px;
 }
-.home-quote-wrapper span{
+.home-quote-wrapper div{
     color: #cfcccc;
     font-family: ralemed;
     font-size: 25px;
@@ -140,7 +164,7 @@
 }
 .home-service-content{
      font-family: utmneu;
-     border-top: solid 5px #e5efff;
+     border-top: solid 5px black;
      transition: 0.3s;
     min-width: 250px;
     cursor: pointer;
@@ -148,6 +172,18 @@
 .home-service-content:hover{
     border-top: solid 5px #5028ff;
     transform: scale(1.05);
+}
+.home-service-btn{
+    border-bottom: solid #e5efff thin;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    transition: 0.3s;
+    width: 60%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .home-service-content:hover > .home-service-btn {
     background-color: #5028ff;
@@ -169,18 +205,7 @@
     font-family: ralemed;
     margin-bottom: 20px;
 }
-.home-service-btn{
-    border-bottom: solid #e5efff thin;
-    background-color: #e5efff;
-    color: white;
-    border-radius: 20px;
-    transition: 0.3s;
-    width: 60%;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 .card-3d {
     margin: auto;
     position: relative;
@@ -251,10 +276,6 @@
 }
 .home-slide-feature-wrapper .col-md-6{
     margin-bottom: 20px;
-}
-.home-slide-feature-title{
-    font-family: utmneu;
-    font-size: 24px;
 }
 .home-slide-feature-description{
     font-family: ralemed;
@@ -365,6 +386,7 @@
 .home-part-second .form-control::-webkit-input-placeholder{
     color: #FDFDFD;
     font-family: ralemed;
+    font-size: 18px;
 }
 .check {
     display: block;
@@ -372,7 +394,8 @@
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 16px;
+    font-family: ralemed;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
