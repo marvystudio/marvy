@@ -23,7 +23,7 @@
     Your browser does not support HTML5 video.
 </video>
 <div class="home-top-background">
-    <div id="mySidenav" class="sidenav">
+    <div id="mySidenav" class="sidenav ">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
         <a><img src="images/new_M.png" width="100px"></a>
         <a href="#">Home</a>
@@ -46,7 +46,7 @@
             <div class="col-4 home-top-menu-wrapper  ">
                 <span class="d-block d-sm-none" style="font-size:30px; color: white" onclick="openNav()"><i class="fas fa-bars"></i></span>
 
-                <ul class="list-unstyled home-menu-wrapper d-none d-sm-block d-md-block" id="fixed-top">
+                <ul class="list-unstyled home-menu-wrapper d-none d-sm-block d-md-block scroll-fixed-top" id="">
                     <p id="hidden-logo">
                         <img src="images/new_M.png" width="50px">
                     </p>
@@ -137,16 +137,16 @@
 
     </div>
 
-    <div id="demo" ng-controller="slideCtrl" class="{{takewidth>768 ? 'carousel slide' : ''}}" data-ride="carousel" data-interval="false">
-        <ul class="carousel-indicators" ng-show="takewidth>768" style="z-index: 9999!important;">
+    <div id="demo" ng-controller="slideCtrl" class="carousel slide" data-ride="carousel" data-interval="false">
+        <ul class="carousel-indicators" style="z-index: 9999!important;">
             <li data-target="#demo" data-slide-to="0" class="active"></li>
             <li data-target="#demo" data-slide-to="1"></li>
             <li data-target="#demo" data-slide-to="2"></li>
         </ul>
 
         <!-- The slideshow -->
-        <div class="{{takewidth>768 ? 'carousel-inner' : ''}}" style="position: relative" > <!--carousel-inner-->
-            <div class="{{takewidth>768 ? 'carousel-item active' : ''}} "> <!--carousel-item-->
+        <div class="carousel-inner" style="position: relative" > <!--carousel-inner-->
+            <div class="carousel-item active"> <!--carousel-item-->
                 <div class="home-slide-description"> <!--home-slide-description-->
                     <div class="container" > <!--container-->
                         <div class="row"> <!--row-->
@@ -214,6 +214,13 @@
                 </div> <!--/home-slide-description-->
 
                 <div class="home-slide-video-wrapper"  > <!--home-slide-video-wrapper-->
+
+                    <div style="object-fit: cover; {{takewidth>768 ? ' height: 500px' : ''}}; width: 100%">
+                        <video class="home-slide-video"  autoplay muted loop  >
+                            <source src="images/Aspect%20Ratio%20-%20169%20Video%20Demo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                     <div class="{{takewidth>768 ? 'overlay' : ''}}  ">
                         <div class="container">
                             <div class="row  mt-md-5">
@@ -235,16 +242,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div  ng-if="takewidth>768" style="object-fit: cover; height: 500px; width: 100%">
-                        <video class="home-slide-video"  autoplay muted loop  >
-                            <source src="images/Aspect%20Ratio%20-%20169%20Video%20Demo.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
                     </div>
                 </div> <!--/home-slide-video-wrapper-->
             </div> <!--/carousel-item-->
-            <div class="{{takewidth>768 ? 'carousel-item' : ''}} "> <!--carousel-item-->
+            <div class="carousel-item"> <!--carousel-item-->
                 <div class="home-slide-description"> <!--home-slide-description-->
                     <div class="container" > <!--container-->
                         <div class="row"> <!--row-->
@@ -312,6 +313,12 @@
                 </div> <!--/home-slide-description-->
 
                 <div class="home-slide-video-wrapper"  > <!--home-slide-video-wrapper-->
+                    <div style="object-fit: cover; {{takewidth>768 ? ' height: 500px' : ''}}; width: 100%">
+                        <video class="home-slide-video"  autoplay muted loop  >
+                            <source src="images/Aspect%20Ratio%20-%20169%20Video%20Demo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                     <div class="{{takewidth>768 ? 'overlay' : ''}}  ">
                         <div class="container">
                             <div class="row  mt-md-5">
@@ -333,22 +340,16 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div  ng-if="takewidth>768" style="object-fit: cover; height: 500px; width: 100%">
-                        <video class="home-slide-video"  autoplay muted loop  >
-                            <source src="images/Aspect%20Ratio%20-%20169%20Video%20Demo.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
                     </div>
                 </div> <!--/home-slide-video-wrapper-->
             </div> <!--/carousel-item-->
         </div> <!--/carousel-inner-->
-        <div ng-show="takewidth>768" >
+        <div>
             <a class="carousel-control-prev" href="#demo" style="z-index: 99999!important;" data-slide="prev"  style=" left: 0">
-                <i class="fas fa-chevron-left fa-3x"></i>
+                <i style="{{takewidth<768 ? 'color: black' : ''}}" class="fas fa-chevron-left fa-3x"></i>
             </a>
             <a class="carousel-control-next" href="#demo" style="z-index: 99999!important;" data-slide="next" style="right: 0">
-                <i class="fas fa-chevron-right fa-3x"></i>
+                <i style="{{takewidth<768 ? 'color: black' : ''}}" class="fas fa-chevron-right fa-3x"></i>
             </a>
         </div>
         <!-- Left and right controls -->
@@ -432,7 +433,7 @@
                         <input type="text" class="form-control repair" placeholder="Your email address*" style="border-bottom: none;">
                     </div>
                     <div class="content">
-                        <h4>I'm interested in</h4>
+                        <h4 style="text-transform: uppercase">I'm interested in</h4>
                         <label class="check">Big-screen AR
                             <input type="checkbox">
                             <span class="checkmark"></span>

@@ -554,6 +554,11 @@
         transform: translateY(0px);
 
     }
+    .typewriter{
+        white-space: unset;
+        animation:
+                typing 1s steps(40, end);
+    }
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
     .home-menu-wrapper .scrolled  li a{
