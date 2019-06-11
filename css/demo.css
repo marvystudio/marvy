@@ -631,6 +631,7 @@
     font-style: normal;
 }
 .btn-buy{
+    font-family: utmneu;
     border: solid thin #5028ff ;
     border-radius: 0px;
     padding: 5px 25px 5px 25px;
@@ -644,7 +645,7 @@
     color: white;
 }
 .eco-browse-all{
-    height: 300px;
+    height: 350px;
     background-image: url(../images/adult-fashion-footwear-1143503.jpg);
     background-position: center;
     background-size: 400px;
@@ -652,6 +653,7 @@
     background-attachment: fixed;
     border-radius: 50%;
     position: relative;
+    padding: 0px!important;
 }
 .eco-window-tint {
     background-color: rgba(0, 0, 0, 0.5);
@@ -690,13 +692,49 @@
     box-shadow: inset 200px 0 0 0  #5028ff;
     color: white;
 }
+.eco-product-wrapper{
+    z-index: 99999!important;
+    transition: 0.4s ease-in-out;
+}
 .eco-product-box{
     background-color: #eeeeee ;
-    padding: 50px 0px;
+    min-height: 400px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
+.eco-product-box:hover >.eco-product-overlay {
+    opacity: 1;
+    width: 100%;
+}
+.eco-product-overlay{
+    position: absolute;
+    background-color: rgba(0,0,0,0.6);
+    opacity: 0;
+    width: 0;
+    height: 100%;
+    transition: 0.2s ease-in-out;
+    justify-content: center;
+    padding-top: 100px;
+}
+.eco-product-content{
+    padding: 50px 0;
+    justify-content: center;
+}
+.eco-product-name{
+    font-family: utmneu;
+    text-align: center;
+    font-size: 28px;
+    color: white;
+}
+.is-showing {
+    opacity: 1;
+    transform: translateX(0px);
 }
 .eco-bestseller-wrapper{
     background-color: #5028ff;
-    transform: translate(-100px, -100px)  ;
+    padding: 20px;
     font-family: utmneu;
     color: white;
     line-height: 50px;
@@ -714,14 +752,136 @@
     line-height: 25px;
     margin-top: 10px;
 }
-.eco-bestseller-wrapper .btn-browse:hover{
-    border: solid thin white !important;
-    box-shadow: inset 200px 0 0 0  white!important;
+.eco-blog-wrapper{
+    margin-top: 50px;
+    padding: 100px 0px;
+}
+.btn-bestseller{
+    border: solid thin white ;
+    border-radius: 0px;
+    padding: 5px 25px 5px 25px;
+    transition: 0.4s;
+    box-shadow: inset 10px 0 0 0 white;
+    white-space: nowrap;
+    color: white;
+    font-family: utmneu;
+    z-index: 9;
+}
+.btn-bestseller:hover{
+    border: solid thin white ;
+    box-shadow: inset 200px 0 0 0  white;
     color: black;
+}
+.eco-blog-pic{
+    height: 200px;
+    background-size: cover!important;
+    margin-top: 20px;
+}
+.eco-blog-content{
+    background-color: white;
+}
+.eco-blog-article{
+    font-size: 18px;
+    font-family: utmneu;
+}
+.eco-blog-desc{
+    font-size: 12px;
+    margin-top: 10px;
+    font-family: ralemed;
+}
+.eco-blog{
+    top: -50px;
+    position: absolute;
+    font-size: 120px;
+    color: #eeeeee;
+    font-family: utmneu;
+}
+.eco-blog-mobile{
+    font-size: 50px;
+    font-family: utmneu;
+    text-align: center;
+}
+.eco-side-nav{
+    height: 100vh;
+    position: fixed;
+    width: 40px;
+    background-color: black;
+    top: 0px;
+    transition: 0.5s;
+    z-index: 99999999999;
+}
+.eco-side-nav-active{
+    width: 100%;
+}
+.eco-side-brand div{
+    transition: all 0.3s ease-in-out;
+}
+.eco-side-nav-active .eco-side-brand div{
+    display: inline-block;
+
+}
+.eco-side-brand{
+    color: white;
+    font-family: utmneu;
+    font-size: 20px;
+    margin-left: 5px;
+}
+.burger-custom-wrapper{
+    padding: 0px!important;
+    top: 50%;
+    position: fixed;
+}
+.burger-custom,.burger-custom::before,.burger-custom::after{
+    background-color: white!important;
+    width: 30px!important;
+    padding: 0px!important;
+}
+.eco-side-nav-content-left{
+    font-family: utmneu;
+    font-size: 50px;
+    margin-top: 150px;
+    border-right: solid thin white;
+}
+.eco-side-nav-content-left div a{
+    color: white!important;
+    opacity: 0.5;
+    text-decoration: none;
+    transition: 0.1s;
+}
+.eco-side-nav-content-left div a:hover{
+    opacity: 1;
+    padding-left: 20px;
+}
+.eco-side-nav-content{
+    display: none;
+}
+.eco-side-nav-content-active{
+    display: block;
+}
+.eco-side-nav-search{
+    width: 100%;
+    height: 50px;
+    border: solid thin white;
+    color: white;
+    font-family: utmneu;
+    font-size: 30px;
+    background-color: transparent;
+    padding-left: 20px;
 }
 @media only screen and (max-width: 768px) {
     .home-slide-description{
         height: auto;
+    }
+    .eco-browse-all{
+        border-radius: 0;
+        background-size: cover;
+    }
+    .eco-window-tint {
+        border-radius: 0;
+    }
+
+    .eco-product-box{
+        opacity: 1;
     }
     .home-slide-video-btn{
         border: solid thin black;
@@ -739,10 +899,56 @@
     }
 
 }
+@media only screen and (max-width: 1024px) {
+
+    .eco-side-nav{
+        width: 0px;
+    }
+    .burger-custom-wrapper{
+        top: 20px;
+        left: 20px;
+    }
+
+    .burger-custom,.burger-custom::before,.burger-custom::after{
+        background-color: black!important;
+        width: 30px!important;
+        padding: 0px!important;
+    }
+    .burger-custom-active,.burger-custom-active::before,.burger-custom-active::after{
+        background-color: white!important;
+    }
+    .eco-side-nav-active{
+        width: 100%;
+    }
+    .eco-side-nav-content-left{
+        margin-top: 20px;
+        border-right: none;
+
+    }
+}
 @media only screen and (max-width: 576px) {
+
+    .eco-side-nav-content-left{
+        margin-top: 20px;
+        border-right: none;
+
+    }
     .home-part-first img.img-fluid {
         transform: translateY(0px);
 
+    }
+    .eco-product-box{
+        opacity: 1;
+    }
+    .eco-top-name-product{
+        font-size: 60px;
+    }
+    .eco-browse-all{
+        border-radius: 0;
+        background-size: cover;
+    }
+    .eco-window-tint {
+        border-radius: 0;
     }
     .typewriter{
         white-space: unset;
