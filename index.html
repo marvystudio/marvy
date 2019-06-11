@@ -15,7 +15,14 @@
     <script src="js/bootstrap.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
     <script src="lib/wow.min.js"></script>
+    <script src="lib/parallax.js"></script>
+    <script type="module"
+            src="https://unpkg.com/@google/model-viewer@0.3.1/dist/model-viewer.js">
+    </script>
 
+    <script nomodule
+            src="https://unpkg.com/@google/model-viewer@0.3.1/dist/model-viewer-legacy.js">
+    </script>
 </head>
 <body>
     <video autoplay muted loop id="myVideo">
@@ -88,9 +95,8 @@
         </div>
     </div>
     <div style="background-color: white">
-        <div class="home-service-wrapper">
-            <div class="container">
-
+        <div class="home-service-wrapper" style="position: relative">
+            <div class="container" >
                 <div class="home-service-title ">Our Services</div>
                 <div class="row">
                     <div class="card-columns">
@@ -102,9 +108,9 @@
                             </div>
                             <div>VR</div>
                             <span class="home-service-description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </span><br>
-                            <button class="btn home-service-btn ">Detail</button>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </span><br>
+                            <button class="btn home-service-btn " >Detail</button>
                         </div>
                         <div class="home-service-content card wow bounceIn text-center" onclick="javascript:window.location.href='https://cutocubu.github.io/testAR/AR.html'">
                             <div class="card-3d">
@@ -114,12 +120,12 @@
                             </div>
                             <div>AR</div>
                             <span class="home-service-description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </span><br>
-                            <button class="btn home-service-btn ">Detail</button>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </span><br>
+                            <button class="btn home-service-btn " >Detail</button>
                         </div>
-                        <div class="home-service-content card wow bounceIn text-center">
+                        <div class="home-service-content card wow bounceIn text-center" >
                             <div class="card-3d">
                                 <div class="card-3d-img-wrapper">
                                     <img class="card-3d-img home-service-content-icon" width="150px" height="150px" src="images/icons/463002-512.png">
@@ -127,14 +133,57 @@
                             </div>
                             <div style="font-size: 30px">Web-XR</div>
                             <span class="home-service-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </span><br>
+                            <button class="btn home-service-btn ">Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="home-service-title " align="center"> Our Services</div>
+                <div class="row" >
+                    <div class="col-md-6"  style="z-index: 99!important;">
+                        <div class="home-service-content-wrapper">
+                            <div class="home-service-title" style="font-size: 50px">VR</div>
+                            <div class="home-service-description">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </span><br>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+                            <button class="btn home-service-btn ">Detail</button>
+                        </div>
+                        <div class="home-service-content-wrapper">
+                            <div class="home-service-title" style="font-size: 50px">XR</div>
+                            <div class="home-service-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+                            <button class="btn home-service-btn ">Detail</button>
+                        </div>
+                        <div class="home-service-content-wrapper">
+                            <div class="home-service-title" style="font-size: 50px">WEB</div>
+                            <div class="home-service-description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
                             <button class="btn home-service-btn ">Detail</button>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div class="para-container d-none d-lg-block" >
+                <ul id="scene">
+                    <li class="layer" data-depth="1"><img src="images/1.png" width="100%"></li>
+                    <li class="layer" data-depth="1.5"><img src="images/2.png" width="100%"></li>
+                    <li class="layer" data-depth="1.5"><img src="images/3.png" width="100%"></li>
+                    <li class="layer" data-depth="1.5"><img src="images/4.png" width="100%"></li>
+                    <li class="layer" data-depth="1.5">
+                        <model-viewer alt="A 3D model of a shape" src="90a30469-f038-4054-be9c-fd1ec94a810d_kitchentest.glb" auto-rotate ar camera-controls style="width:500px; height:500px;"></model-viewer>
+                    </li>
+                </ul>
+            </div>-->
         </div>
 
         <div id="demo" ng-controller="slideCtrl" class="carousel slide" data-ride="carousel" data-interval="false">
@@ -593,5 +642,7 @@
     function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
     }
+    var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene);
 </script>
 
