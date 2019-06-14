@@ -24,6 +24,9 @@ $(window).scroll(function() {
     $('.eco-airforce').css({
         'transform' : 'translateX('+ wScroll /4 +'%)'
     });
+    $('.ass').css({
+        'transform' : 'translateX('+ wScroll /4 +'vh)'
+    });
     if(wScroll > $('.eco-browse-all').offset().top - $(window).height()){
         var opacity = (wScroll - $('.eco-browse-all').offset().top + 400) / (wScroll / 5);
 
